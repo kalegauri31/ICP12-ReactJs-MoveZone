@@ -1,4 +1,4 @@
-import { Clock, Dot } from 'lucide-react'; 
+import { Clock, Dot, HeartIcon } from 'lucide-react'; 
 import { useNavigate } from "react-router";
 import Button from './Button';
 
@@ -16,8 +16,8 @@ function MovieCard({
                 />
             </div>
             <div className="flex flex-col border-t border-t-[#456882] gap-3 items-start text-[#E3E3E3] p-5">
-                <div className='flex flex-col gap-3'>
-                    <h2 className='text-[20px] font-bold'>{name}</h2>
+                <div className='flex flex-col gap-3  relative'>
+                    <h2 className='text-[22px]! font-bold flex items-center justify-between w-full'>{name} <span className='cursor-pointer absolute right-[0px]'>{<HeartIcon/>}</span></h2>
                     <p className='text-gray-300 text-[14px] leading-[1.7]'>{description}</p>
                 </div>
                 <div className='flex text-gray-400 justify-between gap-4 items-center text-[16px]'>
