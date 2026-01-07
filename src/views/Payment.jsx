@@ -33,4 +33,23 @@ const Payment = () => {
     console.log(paymentData);
   };
 
-  
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <h2 className="text-2xl font-bold text-center mb-6">Payment</h2>
+
+        <form onSubmit={handleSubmit}>
+          {/* Card Holder Name */}
+          <div className="mb-4">
+            <label className="block mb-2">Card Holder Name</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter name"
+              value={paymentData.name}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-2 border rounded-md"
+            />
+          </div>
+
