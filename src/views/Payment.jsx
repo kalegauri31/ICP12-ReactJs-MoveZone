@@ -110,3 +110,20 @@ const Payment = () => {
             />
           </div>
 
+          {/* Pay Button */}
+          <button
+            type="submit"
+            className="w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700"
+          >
+            Pay Now
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default Payment;
+
+
+
