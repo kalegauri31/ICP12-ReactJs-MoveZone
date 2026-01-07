@@ -48,3 +48,17 @@ const Register = () => {
               className="w-full px-4 py-2 border rounded-md"
             />
           </div>
+
+          {/* Email */}
+          <div className="mb-4">
+            <label className="block mb-2">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-2 border rounded-md"
+            />
+          </div>
