@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from "react";
 
-function Payment() {
-  return (
-    <div>Payment</div>
-  )
-}
-
-export default Payment
+const Payment = () => {
+  const [paymentData, setPaymentData] = useState({
+    name: "",
+    cardNumber: "",
+    expiry: "",
+    cvv: "",
+    amount: "",
+  });
