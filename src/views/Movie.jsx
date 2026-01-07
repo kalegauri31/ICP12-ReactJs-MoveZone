@@ -11,7 +11,7 @@ const SelectBox = ({ value, onChange, options }) => {
       {
         options.map((item) => {
           return (
-            <option key={item} value={item}  className="px-5 bg-[#456882]">{item}</option>
+            <option key={item} value={item} className="px-5 bg-[#456882]">{item}</option>
           )
         })
       }
@@ -33,8 +33,8 @@ function Movie() {
 
   return (
     <div className='bg-[#1B3C53] min-h-screen'>
-      <div className="relative bg-cover bg-[#262b2f] bg-center filter bg-blend-multiply bg-opacity-50 pt-8" style={{ backgroundImage: `url(/movieImages/bg.jpg)` }}>
-        < div className='min-h-[80vh]   flex flex-col items-center justify-center  gap-7 px-0  py-4 md:p-4 text-3xl font-bold text-[#E3E3E3]'>
+      <div className="relative bg-cover  mb-4 bg-[#262b2f] bg-center filter bg-blend-multiply bg-opacity-50 pt-8" style={{ backgroundImage: `url(/movieImages/bg.jpg)` }}>
+        < div className='min-h-[70vh]   flex flex-col items-center justify-center  gap-7 px-0  py-4 md:p-4 text-3xl font-bold text-[#E3E3E3]'>
           <div className='flex flex-col gap-7'>
             <h1 className='text-[35px]! backdrop:backdrop-blur-2xl md:text-[50px]! text-center'> Discover Movies You’ll Love</h1>
             <h3 className='text-center text-[22px]! md:text-[30px] text-gray-400'> Browse by genre, language & book instantly</h3>
@@ -58,19 +58,19 @@ function Movie() {
             />
           </div>
         </div>
-        </div>
-        <div className='flex gap-10 p-7 items-center justify-center flex-wrap '>
-          {filteredMovies.length > 0 ? (
-            filteredMovies.map((movie, index) => (
-              <MovieCard key={index} {...movie} />
-            ))
-          ) : (
-            <p className="text-[#E3E3E3] text-2xl flex items-center gap-4">No movies found <Clapperboard /></p>
-          )}
-        </div>
       </div>
-   
-      )
+      <div className='flex gap-10 p-7 items-center justify-center flex-wrap '>
+        {filteredMovies.length > 0 ? (
+          filteredMovies.map((movie, index) => (
+            <MovieCard key={index} {...movie} />
+          ))
+        ) : (
+          <p className="text-[#E3E3E3] text-2xl flex items-center gap-4">No movies found <Clapperboard /></p>
+        )}
+      </div>
+    </div>
+
+  )
 }
 
-      export default Movie
+export default Movie
