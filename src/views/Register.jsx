@@ -76,3 +76,17 @@ const Register = () => {
               className="w-full px-4 py-2 border rounded-md"
             />
           </div>
+
+          {/* Confirm Password */}
+          <div className="mb-6">
+            <label className="block mb-2">Confirm Password</label>
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder="Confirm password"
+              value={formData.confirmPassword}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-2 border rounded-md"
+            />
+          </div>
