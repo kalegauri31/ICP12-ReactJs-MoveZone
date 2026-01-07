@@ -33,11 +33,11 @@ function Navbar() {
                     <Link to="/" onClick={() => setOpen(false)} className="text-white hover:text-[#1B3C53]">
                         Home
                     </Link>
-                    <Link to="/movies" onClick={() => setOpen(false)} className="text-white hover:text-[#1B3C53]">
-                        Movies
+                    <Link to="/movie" onClick={() => setOpen(false)} className="text-white hover:text-[#1B3C53]">
+                        Movie
                     </Link>
-                    <Link to="/bookings" onClick={() => setOpen(false)} className="text-white hover:text-[#1B3C53]">
-                        Bookings
+                    <Link to="/booking" onClick={() => setOpen(false)} className="text-white hover:text-[#1B3C53]">
+                        Booking
                     </Link>
                     <Link to="/about" onClick={() => setOpen(false)} className="text-white hover:text-[#1B3C53]">
                         About
