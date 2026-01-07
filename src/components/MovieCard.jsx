@@ -74,7 +74,7 @@ function MovieCard({
                 </div>
                  <div className='my-2'>
                     <Button title={"Book Now"} variant='primary' size='lg' onClick={()=>{
-                        navigate("/booking")
+                        navigate(`/booking/${id}`)
                     }}/>
                 </div>
                

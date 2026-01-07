@@ -161,7 +161,7 @@ const movies=[
     id:"17",
      image: "/movieImages/tuumbad.jpg",
     name: "Tumbbad",
-    type: "Horor",
+    type: "Horror",
     language: "Marathi",
      description:"A dark mythological thriller about greed, curses, and hidden treasures.",
     year: "2018 ",
