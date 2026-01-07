@@ -1,5 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
+import movies from '../data/movies'
+import { Languages } from 'lucide-react'
+import MovieCard from '../components/MovieCard'
 const SelectBox = ({ value, onChange, options }) => {
   return (
     <select className='border px-5 py-2 w-[100%] cursor-pointer md:w-[25%] bg-[#234C6A]  focus:outline-none rounded-[4px] border-[1.5px] text-gray-300 border-[#456882] '
@@ -36,9 +39,18 @@ function Movie() {
                     value={movieLang}
                     onChange={(e) => setMovieLang(e.target.value)}
                     options={["All", "English", "Hindi", "Marathi", "Tamil"]}
-                />
-                
+                />        
       </div>
+        <div className='flex gap-10 p-7 items-center justify-center flex-wrap '>
+                {
+                  movies.map((movie, index)=>{
+                
+                   return(
+                      <MovieCard {...movie} key={index}/>
+                   )
+                  })
+                }
+            </div>
     </div>
 
   )
