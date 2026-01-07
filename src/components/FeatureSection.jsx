@@ -22,7 +22,7 @@ const FeatureSection = () => {
         <div className="flex justify-center mt-12">
           <Button
             title="Show More"
-            size="lg"
+            size="xl"
             onClick={() => navigate('/movies')}
           />
         </div>

@@ -1,6 +1,6 @@
 import { StarIcon, CalendarIcon, ClockIcon } from 'lucide-react'
 import { useNavigate } from 'react-router'
-import Button from './Button'
+import Button from '../components/Button'
 
 const MovieCard = ({ movie }) => {
   const navigate = useNavigate()
@@ -39,13 +39,17 @@ const MovieCard = ({ movie }) => {
           <StarIcon className="h-4 w-4 mr-1 fill-yellow-400" />
           {movie.rating}
         </div>
-        <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="mt-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
           <Button
             title="Buy Ticket"
-            size="sm"
+            size="md"
+            variant="primary"
+            className="px-6 py-3 text-base rounded-lg bg-red-500 hover:bg-red-600 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
             onClick={() => navigate(`/booking/${movie.id}`)}
           />
         </div>
+
+
       </div>
     </div>
   )
