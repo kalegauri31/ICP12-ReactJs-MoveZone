@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-function Register() {
-  return (
-    <div>Register</div>
-  )
-}
 
-export default Register
+const Register = () => {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+    });
