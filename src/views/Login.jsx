@@ -29,3 +29,16 @@ const Login = () => {
               required
             />
           </div>
+
+          {/* Password */}
+          <div className="mb-6">
+            <label className="block mb-2 text-gray-700">Password</label>
+            <input
+              type="password"
+              className="w-full px-4 py-2 border rounded-md"
+              placeholder="Enter password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
