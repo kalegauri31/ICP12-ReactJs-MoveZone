@@ -3,7 +3,7 @@ import React from 'react'
 import Button from '../components/Button';
 import { useNavigate } from 'react-router';
 import MissonImage from "../assets/about-img/mission.jpg"
-import { FEATURES } from '../data/about';
+import { FEATURES } from '../data/AboutData.jsx';
 import AboutCard from '../components/AboutCard';
 
 
