@@ -24,31 +24,21 @@ const SeatSelection = () => {
 
   return (
     <>
-      {/* Navbar */}
       <Navbar />
 
-      {/* Page Content */}
       <main
-        className="min-h-screen pt-24 pb-10 flex flex-col items-center px-3 sm:px-6"
+        className="min-h-screen pt-24 pb-12 flex flex-col items-center px-4"
         style={{ backgroundColor: "#1B3C53", color: "#E3E3E3" }}
       >
-        <h1 className="text-lg sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6">
+        <h1 className="text-2xl md:text-3xl font-bold mb-6">
           🎟️ Select Your Seats
         </h1>
 
-        {/* Screen */}
-        <div
-          className="mx-auto w-44 sm:w-64 md:w-72 h-2 rounded mb-6 text-center text-[10px] font-semibold"
-          style={{ backgroundColor: "#E3E3E3", color: "#1B3C53" }}
-        >
-          SCREEN
-        </div>
-
-        {/* Seats */}
-        <div className="w-full max-w-sm sm:max-w-md md:max-w-lg overflow-x-auto">
-          <div className="space-y-2 sm:space-y-3">
+        {/* Seat Container */}
+        <div className="bg-[#234C6A] p-5 rounded-xl shadow-lg">
+          <div className="space-y-3">
             {rows.map((row) => (
-              <div key={row} className="flex justify-center gap-1.5 sm:gap-3">
+              <div key={row} className="flex justify-center items-center gap-2">
                 {[...Array(cols)].map((_, index) => {
                   const seat = `${row}${index + 1}`;
                   const isSelected = selectedSeats.includes(seat);
@@ -57,16 +47,9 @@ const SeatSelection = () => {
                     <button
                       key={seat}
                       onClick={() => toggleSeat(seat)}
-                      className="
-                        flex-shrink-0
-                        w-7 h-7 text-[9px]
-                        sm:w-9 sm:h-9 sm:text-xs
-                        md:w-10 md:h-10 md:text-sm
-                        rounded-md font-semibold
-                        transition-all duration-200
-                      "
+                      className="w-9 h-9 text-xs rounded-md font-semibold transition-all cursor-pointer"
                       style={{
-                        backgroundColor: isSelected ? "#234C6A" : "#456882",
+                        backgroundColor: isSelected ? "#1B3C53" : "#456882",
                         color: "#E3E3E3",
                       }}
                     >
@@ -79,8 +62,8 @@ const SeatSelection = () => {
           </div>
         </div>
 
-        {/* Selected seats */}
-        <div className="mt-4 text-xs sm:text-sm text-center">
+        {/* Selected Seats */}
+        <div className="mt-5 text-sm text-center">
           Selected Seats:{" "}
           <span className="font-semibold">
             {selectedSeats.length ? selectedSeats.join(", ") : "None"}
@@ -88,20 +71,19 @@ const SeatSelection = () => {
         </div>
 
         {/* Price */}
-        <div className="mt-2 text-sm sm:text-lg font-semibold">
+        <div className="mt-2 text-lg font-semibold">
           Total Price: ₹{totalPrice}
         </div>
 
-        {/* Book Button */}
+        {/* Pay Button */}
         <button
-          className="mt-5 px-6 py-2 rounded-lg font-semibold transition hover:scale-105"
+          className="mt-6 px-8 py-2 rounded-lg font-semibold transition hover:scale-105 cursor-pointer"
           style={{ backgroundColor: "#234C6A", color: "#E3E3E3" }}
         >
           Pay Now
         </button>
       </main>
 
-      {/* Footer */}
       <Footer />
     </>
   );

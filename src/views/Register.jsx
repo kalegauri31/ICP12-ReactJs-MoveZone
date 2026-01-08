@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { User, Mail, Lock, UserPlus } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
