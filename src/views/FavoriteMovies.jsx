@@ -1,26 +1,34 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-function FavoriteMovies() {
-    const [favMovies, setFavMovies]=useState([]);
+import { useEffect, useState } from "react";
+import FavMovieCard from "../components/FavMovieCard";
 
-    useEffect(()=>{
-       const storedMovies=JSON.parse(localStorage.getItem("favoriateMovies") || "[]");
-        setFavMovies(storedMovies);     
-    },[])
+function FavMovies() {
+  const [favMovies, setFavMovies] = useState([]);
+
+  useEffect(() => {
+    const data = JSON.parse(
+      localStorage.getItem("favoriateMovies") || "[]"
+    );
+    setFavMovies(data);
+  }, []);
+
+  
+
   return (
-    <div className='bg-[#1B3C53] min-h-screen'>
-        {
-            favMovies.map((movie, index)=>{
-                const {name, image, id, type, language, year, duration}= movie;
-                return(
-                    <div>
-                        <h1>{name}</h1>
-                    </div>
-                )
-            })
-        }
+    <div className="min-h-screen bg-[#1B3C53] p-6">
+
+
+      {(
+        <div className="flex flex-wrap gap-8 justify-center">
+          {favMovies.map(movie => (
+            <FavMovieCard
+              key={movie.id}
+              movie={movie}
+            />
+          ))}
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
-export default FavoriteMovies
+export default FavMovies;
