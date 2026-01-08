@@ -29,15 +29,15 @@ function About() {
         <h1 className='text-[40px] md:text-[55px] font-bold text-[#E3E3E3]'>About MoveZone</h1>
         <p className='md:text-xl text-lg  text-gray-400  md:w-[60%] w-[90%]'>Your ultimate destination for seamless movie ticket booking. We bring the magic of cinema right to your fingertips.</p>
       </div>
-      <div className='flex  w-[100%] mt-10 gap-5 p-3 '>
+      <div className='flex flex-wrap md:flex-nowrap  w-[100%] mt-10 gap-5 p-3 '>
         {
           features.map((item, index)=>{
             const{image, title, description}=item;
             return(
-            <div className='flex flex-col items-center justify-center gap-3 rounded-2xl shadow-3xl shadow-[gray-500] w-[30%] text-white p-5 bg-[#234C6A]'>
+            <div className='flex flex-col items-center justify-center gap-3 rounded-2xl shadow-3xl shadow-[gray-500] w-[45%] md:w-[30%] text-white p-5 bg-[#234C6A]'>
               <p className='text-gray-500'>{image}</p>
-              <h1>{title}</h1>
-              <p>{description}</p>
+              <h1 className='text-[#E3E3E3] text-3xl font-bold'>{title}</h1>
+              <p className='text-gray-400 '>{description}</p>
             </div>
 
             )
