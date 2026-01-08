@@ -1,11 +1,11 @@
 import React from 'react'
-
 import Button from '../components/Button';
 import { useNavigate } from 'react-router';
 import MissonImage from "../assets/about-img/mission.jpg"
 import { FEATURES } from '../data/AboutData.jsx';
-import AboutCard from '../components/AboutCard';
-
+import AboutFeatureCard from '../components/AboutFeatureCard.jsx';
+import {TEAMDATA } from "../data/AboutData.jsx"
+import AboutTeamCards from '../components/AboutTeamCards.jsx';
 
 function About() {
   const navigate=useNavigate();
@@ -20,7 +20,7 @@ function About() {
           FEATURES.map((item, index)=>{
             const{image, title, description}=item;
             return(
-           <AboutCard {...item} key={index}/>
+           <AboutFeatureCard {...item} key={index}/>
             )
           })
         }
@@ -36,6 +36,16 @@ function About() {
         <div className='md:w-1/2 w-full py-5 flex items-center justify-center'>
     <img src={MissonImage} alt="Mission Image" className='rounded-2xl w-full max-w-[500px] object-cover' />
   </div>
+      </div>
+
+      <div  className='flex flex-wrap items-center justify-center md:flex-nowrap  w-[100%] mt-10 gap-5 p-3 '>
+          {
+            TEAMDATA.map((item, index)=>{
+             return(
+               <AboutTeamCards {...item} key={index} />
+             )
+            })
+          }
       </div>
     </div>
   )

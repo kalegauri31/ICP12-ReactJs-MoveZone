@@ -1,5 +1,6 @@
 import React from 'react';
 import { Film, Users, ShieldCheck, MapPin } from 'lucide-react';
+import SiddhiImg from "../assets/about-img/SiddhiImg.jpg"
 
 const FEATURES = [
   {
@@ -38,6 +39,6 @@ const TEAMDATA=[{
 {
   title:"Siddhi Kharde",
   description:"Head of Design",
-  image:""
+  image:SiddhiImg
 }]
 export { FEATURES, TEAMDATA };
