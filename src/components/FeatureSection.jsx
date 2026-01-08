@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router'
-import MovieCard from './MovieCard'
+import MovieCard from '../components/HomeMovieCard'
 import movies from '../data/MovieData'
 import { ArrowRightIcon } from 'lucide-react'
 import Button from '../components/Button'

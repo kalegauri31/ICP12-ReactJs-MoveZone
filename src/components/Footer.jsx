@@ -24,10 +24,10 @@ function Footer() {
               <Link to="/" className="hover:text-[#E3E3E3] transition">Home</Link>
             </li>
             <li>
-              <Link to="/movies" className="hover:text-[#E3E3E3]  transition">Movies</Link>
+              <Link to="/movie" className="hover:text-[#E3E3E3]  transition">Movie</Link>
             </li>
             <li>
-              <Link to="/bookings" className="hover:text-[#E3E3E3]  transition">Bookings</Link>
+              <Link to="/booking" className="hover:text-[#E3E3E3]  transition">Booking</Link>
             </li>
             <li>
               <Link to="/about" className="hover:text-[#E3E3E3] transition">About</Link>
