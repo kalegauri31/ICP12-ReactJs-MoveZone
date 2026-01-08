@@ -38,7 +38,10 @@ function About() {
   </div>
       </div>
 
-      <div  className='flex flex-wrap items-center justify-center md:flex-nowrap  w-[100%] mt-10 gap-5 p-3 '>
+      <div>
+        <h1 className='text-center text-3xl mt-15 font-bold text-[#E3E3E3]'>MEET OUR TEAM</h1>
+        <div  className='flex flex-wrap items-center justify-center md:flex-nowrap  w-[100%] mt-10 gap-5 p-3 '>
+        
           {
             TEAMDATA.map((item, index)=>{
              return(
@@ -46,6 +49,7 @@ function About() {
              )
             })
           }
+      </div>
       </div>
     </div>
   )
