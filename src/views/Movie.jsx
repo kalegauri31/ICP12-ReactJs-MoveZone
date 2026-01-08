@@ -3,7 +3,7 @@ import { useState } from 'react'
 import movies from '../data/movies'
 import { Clapperboard } from 'lucide-react'
 import SelectBox from "../components/SelectBox"
-import MovieCard from '../components/MovieCard'
+import MoviePageMovieCard from '../components/MoviePageMovieCard'
 
 
 function Movie() {
@@ -49,7 +49,7 @@ function Movie() {
       <div className='flex gap-10 p-7 items-center justify-center flex-wrap '>
         {filteredMovies.length > 0 ? (
           filteredMovies.map((movie, index) => (
-            <MovieCard key={index} {...movie} />
+            <MoviePageMovieCard key={index} {...movie} />
           ))
         ) : (
           <p className="text-[#E3E3E3] text-2xl flex items-center gap-4">No movies found <Clapperboard /></p>

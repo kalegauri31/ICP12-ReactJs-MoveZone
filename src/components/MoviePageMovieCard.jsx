@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 import Button from './Button';
 
-function MovieCard({
+function MoviePageMovieCard({
     image, name, type, language, year, duration, description, id
 }) {
     let navigate=useNavigate();
@@ -83,4 +83,4 @@ function MovieCard({
     )
 }
 
-export default MovieCard;
+export default MoviePageMovieCard;
