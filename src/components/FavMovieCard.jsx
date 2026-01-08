@@ -10,11 +10,20 @@ function FavMovieCard({ movie}) {
         <img
         src={movie.image}
         alt={movie.name}
-        className="h-full w-full"
+        className="h-full w-full "
       />
-
     </div>
-      
+      <div className="p-5 text-[#E3E3E3] flex flex-col gap-3">
+
+        <div className="flex justify-between items-start">
+          <h2 className="text-xl font-bold">{movie.name}</h2>
+          <HeartIcon
+            fill="white"
+            className="cursor-pointer"
+            onClick={() => {}}
+          />
+        </div>
+        </div>
     </div>
   );
 }
