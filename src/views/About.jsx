@@ -6,12 +6,14 @@ import { FEATURES } from '../data/AboutData.jsx';
 import AboutFeatureCard from '../components/AboutFeatureCard.jsx';
 import {TEAMDATA } from "../data/AboutData.jsx"
 import AboutTeamCards from '../components/AboutTeamCards.jsx';
-
+import Navbar from '../components/Navbar.jsx';
+import Footer from '../components/Footer.jsx';
 function About() {
   const navigate=useNavigate();
   return (
-    <div className='bg-[#1B3C53] min-h-screen p-1 box-border'>
-      <div className='flex  items-center bg-[#234C6A] mt-18  flex-col gap-7 md:px-10 py-15 justify-center p-5 text-2xl text-white text-center' >
+    <div className='bg-[#1B3C53] min-h-screen p-[0.1px] box-border'>
+      <Navbar/>
+      <div className='flex  items-center bg-[#234C6A] mt-[100px]  flex-col gap-7 md:px-10 py-15 justify-center p-5 text-2xl text-white text-center' >
         <h1 className='text-[40px] md:text-[55px] font-bold text-[#E3E3E3]'>About MoveZone</h1>
         <p className='md:text-xl text-lg  text-gray-400  md:w-[60%] w-[90%]'>Your ultimate destination for seamless movie ticket booking. We bring the magic of cinema right to your fingertips.</p>
       </div>
@@ -56,6 +58,7 @@ function About() {
         <p className='text-[20px] text-gray-400 md:w-[60%] text-center'>Join millions of movie lovers who trust MoveZone for their cinema experience. Start exploring now!</p>
         <Button title="Browse Movies" variant='primary' size='lg' onClick={()=> navigate("/movie")} />
       </div>
+      <Footer/>
     </div>
   )
 }
