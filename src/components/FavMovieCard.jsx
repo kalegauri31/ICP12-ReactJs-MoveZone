@@ -1,4 +1,4 @@
-import { HeartIcon, Clock } from "lucide-react";
+import { HeartIcon, Dot, Clock} from "lucide-react";
 import { useNavigate } from "react-router";
 
 function FavMovieCard({ movie}) {
@@ -22,6 +22,12 @@ function FavMovieCard({ movie}) {
             className="cursor-pointer"
             onClick={() => {}}
           />
+        </div>
+        <p className="text-gray-400 text-sm flex gap-2 items-center  ">
+          {movie.language} <span className="flex items-center gap-0"> <Dot/> {movie.type}</span>
+        </p>
+        <div className="flex items-center gap-2 text-gray-400">
+          <Clock size={16} /> {movie.duration}
         </div>
         </div>
     </div>
