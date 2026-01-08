@@ -2,7 +2,7 @@ import { HeartIcon, Dot, Clock} from "lucide-react";
 import { useNavigate } from "react-router";
 import Button from "./Button";
 
-function FavMovieCard({ movie}) {
+function FavMovieCard({ movie,onRemoveFav}) {
   const navigate=useNavigate();
   return (
     <div className="md:w-[27%] w-[90%] bg-[#234C6A]  rounded-lg shadow-lg overflow-hidden">
@@ -21,7 +21,7 @@ function FavMovieCard({ movie}) {
           <HeartIcon
             fill="white"
             className="cursor-pointer"
-            onClick={() => {}}
+            onClick={() => {onRemoveFav(movie.id)}}
           />
         </div>
         <p className="text-gray-400 text-sm flex gap-2 items-center  ">
@@ -30,7 +30,7 @@ function FavMovieCard({ movie}) {
         <div className="flex items-center gap-2 text-gray-400">
           <Clock size={16} /> {movie.duration}
         </div >
-        <div className="flext justify-start items-center">
+        <div className="flex justify-start items-center mt-2">
           <Button title="Book Now" variant="primary" size="md" onClick={()=>{
             navigate(`/booking/${movie.id}`)
           }}/>

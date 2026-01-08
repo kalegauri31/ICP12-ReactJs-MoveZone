@@ -11,7 +11,11 @@ function FavMovies() {
     setFavMovies(data);
   }, []);
 
-  
+   const removeFromFav = (id) => {
+    const updatedFavMovies = favMovies.filter(movie => movie.id !== id);
+    setFavMovies(updatedFavMovies);
+    localStorage.setItem("favoriateMovies", JSON.stringify(updatedFavMovies));
+  };
 
   return (
     <div className="min-h-screen bg-[#1B3C53] p-6">
@@ -23,6 +27,7 @@ function FavMovies() {
             <FavMovieCard
               key={movie.id}
               movie={movie}
+              onRemoveFav={removeFromFav}
             />
           ))}
         </div>
