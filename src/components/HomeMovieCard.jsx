@@ -8,7 +8,6 @@ const HomeMovieCard = ({ movie }) => {
   return (
     <div className="w-full max-w-[260px] bg-gradient-to-b from-[#234C6A] to-[#1B3C53] rounded-2xl p-3 shadow-lg group relative overflow-hidden">
       
-      {/* Poster */}
       <div
         onClick={() => navigate(`/booking/${movie.id}`)}
         className="aspect-[2/3] h-80 w-full rounded-xl overflow-hidden bg-gray-800 cursor-pointer"
@@ -20,7 +19,6 @@ const HomeMovieCard = ({ movie }) => {
         />
       </div>
 
-      {/* Content */}
       <div className="mt-4 flex flex-col items-center text-center min-h-[160px]">
         <p className="text-white font-bold text-lg truncate">
           {movie.title}
