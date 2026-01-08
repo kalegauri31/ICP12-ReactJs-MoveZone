@@ -24,7 +24,7 @@ const FeatureSection = () => {
           variant="primary"
             title="Show More"
             size="md"
-            onClick={() => navigate('/movies')}
+            onClick={() => navigate('/movie')}
           />
         </div>
 
