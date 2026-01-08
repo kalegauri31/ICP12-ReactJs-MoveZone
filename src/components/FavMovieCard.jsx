@@ -20,7 +20,7 @@ function FavMovieCard({ movie,onRemoveFav}) {
           <h2 className="text-xl font-bold">{movie.name}</h2>
           <HeartIcon
             fill="white"
-            className="cursor-pointer"
+            className="cursor-pointer hover:scale-110 transition"
             onClick={() => {onRemoveFav(movie.id)}}
           />
         </div>
@@ -30,7 +30,7 @@ function FavMovieCard({ movie,onRemoveFav}) {
         <div className="flex items-center gap-2 text-gray-400">
           <Clock size={16} /> {movie.duration}
         </div >
-        <div className="flex justify-start items-center mt-2">
+        <div className="flex justify-start items-center mt-2 ">
           <Button title="Book Now" variant="primary" size="md" onClick={()=>{
             navigate(`/booking/${movie.id}`)
           }}/>
