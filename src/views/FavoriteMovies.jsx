@@ -9,7 +9,16 @@ function FavoriteMovies() {
     },[])
   return (
     <div className='bg-[#1B3C53] min-h-screen'>
-        <h1>{favMovies.length}</h1>
+        {
+            favMovies.map((movie, index)=>{
+                const {name, image, id, type, language, year, duration}= movie;
+                return(
+                    <div>
+                        <h1>{name}</h1>
+                    </div>
+                )
+            })
+        }
     </div>
   )
 }
