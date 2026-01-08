@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
 
-function FavMovieCards() {
+function FavMovieCards({movie , FemoveMovie}) {
+    const nevigate=useNavigate()
   return (
     <div>
       
