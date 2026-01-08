@@ -1,22 +1,22 @@
 import React from 'react'
 import { Film,Users, ShieldCheck, MapPin } from 'lucide-react'
 
-const fatures=[
+const features=[
   {
-    image:<Film />,
+    image:<Film size={33}/>,
     title:"500+",
     description:"Movies Available"
   },
   {
-    image:<Users />,
+    image:<Users size={33}/>,
     title:"1M+",
     description:"Happy Customers"
   },{
-    image:<ShieldCheck />,
+    image:<ShieldCheck size={33} />,
     title:"50+",
     description:"Partner Cinemas"
   },{
-    image:<MapPin />,
+    image:<MapPin size={33}/>,
     title:"100+",
     description:"Cities Covered"
   }
@@ -28,6 +28,21 @@ function About() {
       <div className='flex  items-center bg-[#234C6A] mt-18  flex-col gap-7 md:px-10 py-15 justify-center p-5 text-2xl text-white text-center' >
         <h1 className='text-[40px] md:text-[55px] font-bold text-[#E3E3E3]'>About MoveZone</h1>
         <p className='md:text-xl text-lg  text-gray-400  md:w-[60%] w-[90%]'>Your ultimate destination for seamless movie ticket booking. We bring the magic of cinema right to your fingertips.</p>
+      </div>
+      <div className='flex  w-[100%] mt-10 gap-5 p-3 '>
+        {
+          features.map((item, index)=>{
+            const{image, title, description}=item;
+            return(
+            <div className='flex flex-col items-center justify-center gap-3 rounded-2xl shadow-3xl shadow-[gray-500] w-[30%] text-white p-5 bg-[#234C6A]'>
+              <p className='text-gray-500'>{image}</p>
+              <h1>{title}</h1>
+              <p>{description}</p>
+            </div>
+
+            )
+          })
+        }
       </div>
     </div>
   )
