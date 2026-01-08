@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router'
 import { Clapperboard, MenuIcon, XIcon } from 'lucide-react'
 import Button from "../components/Button"
 
+
 function Navbar() {
     const [open, setOpen] = useState(false)
     const navigate = useNavigate()
