@@ -51,6 +51,11 @@ function About() {
           }
       </div>
       </div>
+      <div className='my-10 mx-5 flex flex-col gap-6 text-2xl shadow-2xl shadow-gray-900  bg-[#234C6A] items-center justify-center rounded-2xl p-10 text-white '>
+        <h1 className='text-[27px] text-center text-[#E3E3E3] font-bold'>Ready for Movie Magic?</h1>
+        <p className='text-[20px] text-gray-400 md:w-[60%] text-center'>Join millions of movie lovers who trust MoveZone for their cinema experience. Start exploring now!</p>
+        <Button title="Browse Movies" variant='primary' size='lg' onClick={()=> navigate("/movie")} />
+      </div>
     </div>
   )
 }
