@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import FavMovieCard from "../components/FavMovieCard";
 import { HeartIcon } from "lucide-react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function FavMovies() {
     const [favMovies, setFavMovies] = useState([]);
@@ -20,7 +22,8 @@ function FavMovies() {
 
     return (
         <div className="min-h-screen bg-[#1B3C53] p-6">
-            <div className="bg-[#1B3C53] py-16 px-6 text-center">
+            <Navbar/>
+            <div className="bg-[#1B3C53] py-16 px-6 text-center my-6">
                 <h1 className="text-4xl font-bold text-white flex items-center justify-center gap-3">
                     <HeartIcon className="text-red-400" />
                     Your Favorite Movies
@@ -45,6 +48,7 @@ function FavMovies() {
                         )))}
                 </div>
             )}
+            <Footer/>
         </div>
     );
 }
