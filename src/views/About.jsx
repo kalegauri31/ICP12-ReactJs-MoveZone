@@ -5,17 +5,19 @@ import MissonImage from "../assets/about-img/mission.jpg"
 import { TEAMDATA, FEATURES } from '../data/AboutData.js';
 import AboutFeatureCard from '../components/AboutFeatureCard.jsx';
 import AboutTeamCards from '../components/AboutTeamCards.jsx';
+import BgImage from "../assets/about-img/aboutBg.jpeg"
 import Navbar from '../components/Navbar.jsx';
 import Footer from '../components/Footer.jsx';
 function About() {
   const navigate = useNavigate();
   return (
     <div className='bg-[#1B3C53] min-h-screen p-[0.1px] box-border'>
+     <div className="relative bg-cover  mb-4 bg-[#262b2f] bg-center filter bg-blend-multiply bg-opacity-70 pt-8" style={{ backgroundImage: `url(${BgImage})` }}>
       <Navbar />
-      <div className='flex  items-center bg-[#234C6A] mt-[100px]  flex-col gap-7 md:px-10 py-15 justify-center p-5 text-2xl text-white text-center' >
+      <div className='flex  items-center mt-[100px]  flex-col gap-7 md:px-10 py-15 justify-center p-5 text-2xl text-white text-center' >
         <h1 className='text-[40px] md:text-[55px] font-bold text-[#E3E3E3]'>About MoveZone</h1>
-        <p className='md:text-xl text-lg  text-gray-400  md:w-[60%] w-[90%]'>Your ultimate destination for seamless movie ticket booking. We bring the magic of cinema right to your fingertips.</p>
-      </div>
+        <p className='md:text-xl text-lg  text-gray-400 mb-5 md:w-[60%] w-[90%]'>Your ultimate destination for seamless movie ticket booking. We bring the magic of cinema right to your fingertips.</p>
+      </div></div>
       <div className='flex flex-wrap items-center justify-center md:flex-nowrap  w-[100%] mt-10 gap-5 p-3 '>
         {
           FEATURES.map((item, index) => {
