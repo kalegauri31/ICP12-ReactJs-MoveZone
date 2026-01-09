@@ -84,3 +84,12 @@ Movie Zone is a modern and responsive Movie Ticket Booking Web Application built
 *  Folder structure
   
  ![alt text](<src/assets/folder structure.png>)
+
+
+
+
+ 1 *Clone or download the repository* <br>
+   <br>
+   https://github.com/kalegauri31/ICP12-ReactJs-MoveZone
+
+
