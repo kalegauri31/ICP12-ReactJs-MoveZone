@@ -56,8 +56,10 @@ function Footer() {
 
         <div>
           <h3 className="text-lg font-semibold mb-4">Contact</h3>
-          <p className="text-gray-400 text-sm mb-2">Email: support@moviezone.com</p>
-          <p className="text-gray-400 text-sm">Phone: +91 12345 67890</p>
+          <p className="text-gray-400 text-sm mb-2 flex items-center gap-2">Email: <a href="mailto:support@moviezone.com" >support@moviezone.com</a> </p>
+          <p className="text-gray-400 text-sm flex items-center gap-2">Phone:  <a href="tel:+91 12345 67890" className="flex items-center gap-2">
+         +91 12345 67890
+  </a></p>
         </div>
       </div>
 

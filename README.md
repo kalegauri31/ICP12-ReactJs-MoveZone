@@ -83,7 +83,7 @@ Movie Zone is a modern and responsive Movie Ticket Booking Web Application built
 
 *  Folder structure
   
- ![folder structure](<src/assets/folderstructure.png>)
+ ![folder structure](<src/assets/folderstructure .png>)
 
 
 

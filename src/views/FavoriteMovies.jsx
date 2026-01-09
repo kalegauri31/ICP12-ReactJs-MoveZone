@@ -23,7 +23,7 @@ function FavMovies() {
     return (
         <div className="min-h-screen bg-[#1B3C53] p-6">
             <Navbar/>
-            <div className="bg-[#1B3C53] py-16 px-6 text-center my-6">
+            <div className="bg-[#1B3C53] py-12 px-6 text-center my-6">
                 <h1 className="text-4xl font-bold text-white flex items-center justify-center gap-3">
                     <HeartIcon className="text-red-400" />
                     Your Favorite Movies
@@ -36,7 +36,7 @@ function FavMovies() {
             {(
                 <div className="flex flex-wrap gap-8 justify-center">
                     {(favMovies.length === 0 ?
-                        (<p className="flex gap-5 items-center justify-center p-5 mt-9 text-[#E3E3E3] text-3xl text-center fon">
+                        (<p className="flex gap-5 items-center justify-center  mb-10 text-[#E3E3E3] text-3xl text-center fon">
                             No favorite movies yet <HeartIcon className="text-red-400" />
                         </p>)
                         : favMovies.map(movie => (
