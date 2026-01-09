@@ -26,11 +26,9 @@ const trailers = [
 
 export default function TrailerGallery() {
     const [activeTrailer, setActiveTrailer] = useState(trailers[0]);
-
     return (
         <section className="bg-[#456882] w-full py-16">
             <div className="max-w-6xl mx-auto px-4">
-
                 <div className="flex mb-8">
                     <h2 className="text-white text-3xl font-semibold">
                         Trailer
@@ -57,7 +55,7 @@ export default function TrailerGallery() {
                             key={movie.id}
                             onClick={() => setActiveTrailer(movie)}
                             className={`cursor-pointer border-2 rounded-lg overflow-hidden transition-transform
-                ${activeTrailer.id === movie.id
+                            ${activeTrailer.id === movie.id
                                     ? "border-blue-500 scale-105"
                                     : "border-gray-700 hover:scale-105"
                                 }`}>

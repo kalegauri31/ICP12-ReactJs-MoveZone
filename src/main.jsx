@@ -9,6 +9,7 @@ import Register from './views/Register'
 import Seatselection from './views/Seatselection'
 import Payment from './views/Payment'
 import Movie from './views/Movie'
+import FavoriteMovies from './views/FavoriteMovies'
 
 
 
@@ -24,6 +25,7 @@ import Movie from './views/Movie'
     <Route path="/payment" element={<Payment/>}/>
     <Route path="/register" element={<Register/>}/>
     <Route path="/seatselection" element={<Seatselection/>}/>
+    <Route path='/Favoritemovies' element={<FavoriteMovies/>}/>
 
 </Routes>
 </BrowserRouter>
