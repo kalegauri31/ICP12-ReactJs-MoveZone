@@ -49,7 +49,7 @@ function HeroSection() {
                     variant="primary"
                     title="Explore More →"
                     size="lg"
-                    onClick={() => navigate("/movies")}
+                    onClick={() => navigate("/movie")}
                 />
             </div>
         </div>
