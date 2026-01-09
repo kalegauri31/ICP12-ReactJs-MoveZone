@@ -20,9 +20,10 @@ function Booking() {
   }
 
   return (
-    <div className="min-h-screen bg-[#1B3C53] text-white p-6">
+    <><Navbar />
+    <div className="min-h-screen bg-[#1B3C53] text-white p-6 pt-28">
 
-      <Navbar />
+      
       <div className="max-w-4xl mx-auto bg-[#234C6A] rounded-lg p-6 flex flex-col md:flex-row gap-6">
 
         <img
@@ -79,7 +80,7 @@ function Booking() {
           </div>
 
           <div className="my-4">
-            <Button className=""
+            <Button 
               title="Proceed"
               variant="primary"
               size="md"
@@ -100,6 +101,7 @@ function Booking() {
       </div>
       <Footer />
     </div>
+    </>
   );
 }
 
