@@ -2,6 +2,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import movies from "../data/movies.js";
 import Button from './../components/Button.jsx';
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 function Booking() {
   const { id } = useParams();
@@ -19,6 +21,8 @@ function Booking() {
 
   return (
     <div className="min-h-screen bg-[#1B3C53] text-white p-6">
+
+      <Navbar />
       <div className="max-w-4xl mx-auto bg-[#234C6A] rounded-lg p-6 flex flex-col md:flex-row gap-6">
 
         <img
@@ -94,6 +98,7 @@ function Booking() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
