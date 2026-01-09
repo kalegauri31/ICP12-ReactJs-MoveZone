@@ -1,14 +1,17 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import {useNavigate}from "react-router";
 
 const SeatSelection = () => {
   const rows = ["A", "B", "C", "D", "E"];
   const cols = 8;
   const seatPrice = 200;
-
+  
+  let navigate=useNavigate();
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
+
 
   const toggleSeat = (seat) => {
     setSelectedSeats((prev) => {
@@ -21,7 +24,7 @@ const SeatSelection = () => {
       }
     });
   };
-
+  
   return (
     <>
       <Navbar />
@@ -42,7 +45,7 @@ const SeatSelection = () => {
                 {[...Array(cols)].map((_, index) => {
                   const seat = `${row}${index + 1}`;
                   const isSelected = selectedSeats.includes(seat);
-
+                  
                   return (
                     <button
                       key={seat}
@@ -79,6 +82,7 @@ const SeatSelection = () => {
         <button
           className="mt-6 px-8 py-2 rounded-lg font-semibold transition hover:scale-105 cursor-pointer"
           style={{ backgroundColor: "#234C6A", color: "#E3E3E3" }}
+          onclick={Navigate("payment")}
         >
           Pay Now
         </button>

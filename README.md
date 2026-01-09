@@ -1,8 +1,16 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/79de7260-be28-4f81-900a-61c63453f0aa/deploy-status)](https://app.netlify.com/projects/reactjs-moviezone1/deploys)
 
+
+
+
+
+
 🎬 Movie Zone
 
+
 Movie Zone is a modern and responsive Movie Ticket Booking Web Application built using React.js. It allows users to explore movies, select seats, and book tickets with an interactive and user-friendly interface.
+
+
 
 
 
@@ -23,6 +31,7 @@ Movie Zone is a modern and responsive Movie Ticket Booking Web Application built
 
 
 
+
 🛠️ Tech Stack
 
 . Frontend: React.js
@@ -34,6 +43,9 @@ Movie Zone is a modern and responsive Movie Ticket Booking Web Application built
 . Language: JavaScript (ES6+)
 
 . Package Manager: npm
+
+
+
 
 
 
@@ -52,19 +64,23 @@ Movie Zone is a modern and responsive Movie Ticket Booking Web Application built
 
 
 
-🌐 Live Preview
+
+
+
+🌐 Live Preview <br>
 . Hosting on Netlify <br>
  click on - https://reactjs-moviezone1.netlify.app/
 
 
 
 * Home page
-    
-[MovieZone Homepage](./src/assets/movie-img/Homepage.png) 
+
+![Home page](src/assets/movie-img/Homepage.png)
+
   
  
 
 
 *  Folder structure
   
- [MovieZone folder structure](./src/assets/folder%20structure.png) 
+ ![alt text](<src/assets/folder structure.png>)
