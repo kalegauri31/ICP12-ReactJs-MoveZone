@@ -53,15 +53,18 @@ Movie Zone is a modern and responsive Movie Ticket Booking Web Application built
 
 
 🌐 Live Preview
-. Hosting on Netlify
+. Hosting on Netlify <br>
  click on - https://reactjs-moviezone1.netlify.app/
 
 
-
-📸 Screenshot
 
 * Home page
     
 [MovieZone Homepage](./src/assets/movie-img/Homepage.png) 
   
  
+
+
+*  Folder structure
+  
+ [MovieZone folder structure](./src/assets/folder%20structure.png) 
