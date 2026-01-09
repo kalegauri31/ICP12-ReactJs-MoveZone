@@ -2,9 +2,8 @@ import React from 'react'
 import Button from '../components/Button';
 import { useNavigate } from 'react-router';
 import MissonImage from "../assets/about-img/mission.jpg"
-import { FEATURES } from '../data/AboutData.jsx';
+import { TEAMDATA ,FEATURES } from '../data/AboutData.js';
 import AboutFeatureCard from '../components/AboutFeatureCard.jsx';
-import {TEAMDATA } from "../data/AboutData.jsx"
 import AboutTeamCards from '../components/AboutTeamCards.jsx';
 import Navbar from '../components/Navbar.jsx';
 import Footer from '../components/Footer.jsx';

@@ -1,30 +1,28 @@
 import React from 'react';
-import { Film, Users, ShieldCheck, MapPin } from 'lucide-react';
 import SiddhiImg from "../assets/about-img/SiddhiImg.jpg"
-
+import { Film, Users, ShieldCheck, MapPin } from 'lucide-react';
 const FEATURES = [
   {
-    image: <Film size={33} />,
+    image: Film ,
     title: "500+",
     description: "Movies Available",
   },
   {
-    image: <Users size={33} />,
+    image: Users ,
     title: "1M+",
     description: "Happy Customers",
   },
   {
-    image: <ShieldCheck size={33} />,
+    image: ShieldCheck ,
     title: "50+",
     description: "Partner Cinemas",
   },
   {
-    image: <MapPin size={33} />,
+    image: MapPin,
     title: "100+",
     description: "Cities Covered",
   },
 ];
-
 
 const TEAMDATA=[{
   title:"Gauri Kale",
@@ -41,4 +39,4 @@ const TEAMDATA=[{
   description:"Head of Design",
   image:SiddhiImg
 }]
-export { FEATURES, TEAMDATA };
+export {TEAMDATA, FEATURES };
