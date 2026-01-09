@@ -3,7 +3,9 @@ import { useState } from 'react'
 import movies from '../data/movies'
 import { Clapperboard } from 'lucide-react'
 import SelectBox from "../components/SelectBox"
-import MovieCard from '../components/MovieCard'
+import MovieCards from '../components/MovieCards'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 
 function Movie() {
@@ -20,11 +22,12 @@ function Movie() {
 
   return (
     <div className='bg-[#1B3C53] min-h-screen'>
+      <Navbar/>
       <div className="relative bg-cover  mb-4 bg-[#262b2f] bg-center filter bg-blend-multiply bg-opacity-50 pt-8" style={{ backgroundImage: `url(/movieImages/bg.jpg)` }}>
-        < div className='min-h-[70vh]   flex flex-col items-center justify-center  gap-7 px-0  py-4 md:p-4 text-3xl font-bold text-[#E3E3E3]'>
-          <div className='flex flex-col gap-7'>
-            <h1 className='text-[35px]! backdrop:backdrop-blur-2xl md:text-[50px]! text-center'> Discover Movies You’ll Love</h1>
-            <h3 className='text-center text-[22px]! md:text-[30px] text-gray-400'> Browse by genre, language & book instantly</h3>
+        < div className='min-h-[80vh]   flex flex-col items-center justify-center  gap-7 px-0  py-4  md:p-4 text-3xl font-bold text-[#E3E3E3]'>
+          <div className='flex flex-col gap-7 mt-18 md:mt-5'>
+            <h1 className='text-[35px]! text-center backdrop:backdrop-blur-2xl md:text-[50px]! text-center'> Discover Movies You’ll Love</h1>
+            <h3 className='text-center text-center text-[22px]! md:text-[30px] text-gray-400'> Browse by genre, language & book instantly</h3>
           </div>
           <div className='flex flex-col w-[100%]  md:flex-row gap-5 items-center justify-center  p-10 '>
             <div className='md:w-[50%] w-[100%]  flex items-center justify-center'>
@@ -49,12 +52,13 @@ function Movie() {
       <div className='flex gap-10 p-7 items-center justify-center flex-wrap '>
         {filteredMovies.length > 0 ? (
           filteredMovies.map((movie, index) => (
-            <MovieCard key={index} {...movie} />
+            <MovieCards key={index} {...movie} />
           ))
         ) : (
           <p className="text-[#E3E3E3] text-2xl flex items-center gap-4">No movies found <Clapperboard /></p>
         )}
       </div>
+      <Footer/>
     </div>
 
   )
