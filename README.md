@@ -26,7 +26,7 @@ Movie Zone is a modern and responsive Movie Ticket Booking Web Application built
 
 .  Mobile & laptop responsive design
 
-.  Clean UI with a consistent color theme<br>
+.  Clean UI with a consistent color theme<br><br>
 
 
 
@@ -74,8 +74,8 @@ Movie Zone is a modern and responsive Movie Ticket Booking Web Application built
 
 
 * Home page
-
-![Home page](src/assets/Home page.png)
+    ![Home page](<src/assets/Home page.png>)
+  
 
   
  
