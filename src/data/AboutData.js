@@ -1,5 +1,6 @@
 import React from 'react';
-import SiddhiImg from "../assets/about-img/SiddhiImg.jpg"
+import SnehalImg from "../assets/about-img/snehalImg.jpeg"
+import SiddhiImg from "../assets/about-img/siddhiImg.jpg"
 import { Film, Users, ShieldCheck, MapPin } from 'lucide-react';
 const FEATURES = [
   {
@@ -32,7 +33,7 @@ const TEAMDATA=[{
 {
   title:"Snehal Kharat",
   description:"CTO",
-  image:""
+  image:SnehalImg
 },
 {
   title:"Siddhi Kharde",
