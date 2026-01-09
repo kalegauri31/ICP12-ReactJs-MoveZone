@@ -3,29 +3,44 @@ import { Mail, Lock, LogIn } from "lucide-react";
 import { Link } from "react-router";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Toaster ,toast} from "react-hot-toast";
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const handleSubmit = (e) => {
+  e.preventDefault();
 
-    if (!email || !password) {
-      alert("Please fill all fields ❗");
-      return;
-    }
+  if (!email || !password) {
+    toast.error("Please fill all fields!");
+    return;
+  }
 
-    alert("Login Successful 🎉");
-  };
+  const storedUser = JSON.parse(localStorage.getItem("UserInfo"));
+
+  if (!storedUser) {
+    toast.error("No account found. Please register first.");
+    return;
+  }
+
+  if (email !== storedUser.email || password !== storedUser.password) {
+    toast.error("Invalid email or password");
+    return;
+  }
+
+  localStorage.setItem("isLoggedIn", "true");
+  toast.success("Login Successful 🎉");
+};
 
   return (
     <>
 
       <Navbar />
 
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#1b3c53] to-[#234c6a]">
-        <div className="w-full max-w-md rounded-2xl bg-[#2f4a63]/90 backdrop-blur-lg shadow-2xl p-8 text-gray-200">
+      <div className="min-h-screen  flex items-center justify-center bg-gradient-to-br from-[#1b3c53] to-[#234c6a]">
+        <div className="w-full max-w-md mx-5 my-17 rounded-2xl bg-[#2f4a63]/90 backdrop-blur-lg shadow-2xl p-8 text-gray-200">
 
           <div className="flex justify-center mb-6">
             <div className="w-14 h-14 rounded-full bg-white/20 flex items-center justify-center">
@@ -84,7 +99,7 @@ const Login = () => {
 
             <button
               type="submit"
-              className="w-full bg-[#5c748c] hover:bg-[#6f8aa3] transition py-3 rounded-xl font-semibold"
+              className="w-full bg-[#5c748c] hover:bg-[#6f8aa3] transition py-3 rounded-xl font-semibold cursor-pointer"
             >
               Login
             </button>
@@ -101,7 +116,7 @@ const Login = () => {
           </p>
         </div>
       </div>
-
+<Toaster/>
       <Footer />
     </>
   );

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { CreditCard, User, Calendar, Lock } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import toast, { Toaster } from "react-hot-toast";
 
 const Payment = () => {
   const [paymentData, setPaymentData] = useState({
@@ -23,16 +24,16 @@ const Payment = () => {
     e.preventDefault();
 
     if (paymentData.cardNumber.length !== 16) {
-      alert("Card number must be 16 digits");
+     toast.error("Card number must be 16 digits");
       return;
     }
 
     if (paymentData.cvv.length !== 3) {
-      alert("CVV must be 3 digits");
+      toast.error("CVV must be 3 digits");
       return;
     }
+    toast.success("Payment Successful")
 
-    alert("Payment Successful (Demo)");
     console.log(paymentData);
   };
 
@@ -154,6 +155,7 @@ const Payment = () => {
           </form>
         </div>
       </div>
+       <div><Toaster/></div>
 
    
       <Footer />
