@@ -1,16 +1,17 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import movies from "../data/movies";
+import movies from "../data/movies.js";
+import Button from './../components/Button.jsx';
 
 function Booking() {
   const { id } = useParams();
-
-  // ✅ FIX 1: compare as string
+  const navigate = useNavigate();   
   const movie = movies.find(m => m.id === id);
-
   const [selectedTime, setSelectedTime] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(null);
 
-  const timings = ["10:00 AM", "1:30 PM", "5:00 PM", "9:00 PM"];
+  const timings = ["9:00 AM", "12:00 PM", "3:00 PM", "8:00 PM"];
+  const dates = ["Today","Tomorrow","DayAfter"];
 
   if (!movie) {
     return <p className="text-white">Movie not found</p>;
@@ -20,7 +21,6 @@ function Booking() {
     <div className="min-h-screen bg-[#1B3C53] text-white p-6">
       <div className="max-w-4xl mx-auto bg-[#234C6A] rounded-lg p-6 flex flex-col md:flex-row gap-6">
 
-        {/* ✅ FIX 2: use image */}
         <img
           src={movie.image}
           alt={movie.name}
@@ -32,16 +32,37 @@ function Booking() {
           <p className="text-gray-300 mt-1">
             {movie.language} • {movie.type}
           </p>
+          <p className="text-gray-300 mt-1">duration - {movie.duration}</p>
 
-          {/* Timings */}
-          <h3 className="mt-6 mb-3 text-xl">Select Show Time</h3>
+
+          <h3 className="mt-3 mb-3 text-xl font-bold">Select Show Date</h3>
+
+          <div className="flex flex-wrap gap-3">
+            {dates.map(date => (
+              <button
+                key={date}
+                onClick={() => setSelectedDate(date)}
+                className={`px-2 py-1 rounded border 
+                  ${
+                    selectedDate === date
+                      ? "bg-[#456882] border-white"
+                      : "border-[#456882] text-gray-300"
+                  }`}
+              >
+                {date}
+              </button>
+            ))}
+          </div>
+          
+
+          <h3 className="mt-2 mb-3 text-xl font-bold">Select Show Time</h3>
 
           <div className="flex flex-wrap gap-3">
             {timings.map(time => (
               <button
                 key={time}
                 onClick={() => setSelectedTime(time)}
-                className={`px-4 py-2 rounded border 
+                className={`px-3 py-1 rounded border 
                   ${
                     selectedTime === time
                       ? "bg-[#456882] border-white"
@@ -53,18 +74,24 @@ function Booking() {
             ))}
           </div>
 
-          {/* Proceed */}
-          <button
-            disabled={!selectedTime}
-            className={`mt-6 w-full py-3 rounded text-lg
-              ${
-                selectedTime
-                  ? "bg-green-600 hover:bg-green-700"
-                  : "bg-gray-600 cursor-not-allowed"
-              }`}
-          >
-            Proceed
-          </button>
+          <div className="my-4">
+            <Button className=""
+              title="Proceed"
+              variant="primary"
+              size="md"
+              onClick={() => {
+                if (!selectedDate) {
+                  alert("Please select show Date");
+                  return;
+                }
+                if (!selectedTime) {
+                  alert("Please select show Timing");
+                  return;
+                }
+                navigate("/Seatselection");
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>
