@@ -36,7 +36,7 @@ const SeatSelection = () => {
           🎟️ Select Your Seats
         </h1>
 
-        {/* Seat Container */}
+     
         <div className="bg-[#234C6A] p-5 rounded-xl shadow-lg">
           <div className="space-y-3">
             {rows.map((row) => (
@@ -64,7 +64,7 @@ const SeatSelection = () => {
           </div>
         </div>
 
-        {/* Selected Seats */}
+       
         <div className="mt-5 text-sm text-center">
           Selected Seats:{" "}
           <span className="font-semibold">
@@ -72,12 +72,12 @@ const SeatSelection = () => {
           </span>
         </div>
 
-        {/* Price */}
+      
         <div className="mt-2 text-lg font-semibold">
           Total Price: ₹{totalPrice}
         </div>
 
-        {/* Pay Button */}
+      
         <button
           className="mt-6 px-8 py-2 rounded-lg font-semibold transition hover:scale-105 cursor-pointer"
           style={{ backgroundColor: "#234C6A", color: "#E3E3E3" }}

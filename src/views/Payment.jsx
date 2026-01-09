@@ -38,16 +38,16 @@ const Payment = () => {
 
   return (
     <>
-      {/* Navbar */}
+     
       <Navbar />
 
-      {/* Page Content */}
+     
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#1b3c53] to-[#234c6a] pt-20">
 
-        {/* Card */}
+  
         <div className="w-full max-w-md rounded-2xl bg-[#2f4a63]/90 backdrop-blur-lg shadow-2xl p-8 text-gray-200">
 
-          {/* Header */}
+        
           <h2 className="text-3xl font-bold text-center mb-2 tracking-wide">
             PAYMENT
           </h2>
@@ -57,7 +57,7 @@ const Payment = () => {
 
           <form onSubmit={handleSubmit} className="space-y-5">
 
-            {/* Card Holder */}
+           
             <div>
               <label className="block mb-2 text-gray-300">
                 Card Holder Name
@@ -76,7 +76,7 @@ const Payment = () => {
               </div>
             </div>
 
-            {/* Card Number */}
+      
             <div>
               <label className="block mb-2 text-gray-300">Card Number</label>
               <div className="flex items-center gap-3 bg-[#2b4258] rounded-xl px-4 py-3">
@@ -94,7 +94,7 @@ const Payment = () => {
               </div>
             </div>
 
-            {/* Expiry */}
+        
             <div>
               <label className="block mb-2 text-gray-300">Expiry Date</label>
               <div className="flex items-center gap-3 bg-[#2b4258] rounded-xl px-4 py-3">
@@ -110,7 +110,7 @@ const Payment = () => {
               </div>
             </div>
 
-            {/* CVV */}
+          
             <div>
               <label className="block mb-2 text-gray-300">CVV</label>
               <div className="flex items-center gap-3 bg-[#2b4258] rounded-xl px-4 py-3">
@@ -128,7 +128,7 @@ const Payment = () => {
               </div>
             </div>
 
-            {/* Amount */}
+          
             <div>
               <label className="block mb-2 text-gray-300">Amount</label>
               <div className="bg-[#2b4258] rounded-xl px-4 py-3">
@@ -144,7 +144,7 @@ const Payment = () => {
               </div>
             </div>
 
-            {/* Button */}
+           
             <button
               type="submit"
               className="w-full bg-[#5c748c] hover:bg-[#6f8aa3] transition text-white py-3 rounded-xl font-semibold shadow-lg"
@@ -155,7 +155,7 @@ const Payment = () => {
         </div>
       </div>
 
-      {/* Footer */}
+   
       <Footer />
     </>
   );
